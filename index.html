@@ -1,0 +1,705 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div class="step slide" data-x="-17000" data-y="0">
+        <center>
+            <q>Evolution of Javascript</q> <br/>
+            <img src="images/javascript.png"/>
+        </center>
+    </div>
+
+    <div class="step" data-x="-16000" data-y="0" data-rotate="90" data-scale="4">
+        <center>Browser Wars Era</center>
+    </div>
+
+    <div class="step slide" data-x="-15000" data-y="0">
+        <q>Once upon a time...</q>
+    </div>
+
+    <div class="step slide" data-x="-14000" data-y="0">
+        <q>Microsoft and Netscape fought over the Browser Market Share<br></q>
+    </div>
+
+    <div class="step slide" data-x="-13000" data-y="0">
+        <q>Mocha was born in March/April 1995, hacked up in about 10 days for Netscape Navigator</q>
+    </div>
+
+    <div class="step slide" data-x="-12000" data-y="0">
+        <q>which was then renamed to LiveScript in September 1995, which then settled on the name JavaScript in December 1995</q>
+    </div>
+
+    <div class="step slide" data-x="-11000" data-y="0">
+        <q>The name implied a connection to Java, which is what Netscape intended, even though the language had nothing to do with Java. The renaming also coincided with Netscape bundling support for Java in it's browser, adding to the confusion. Submitted to ECMA - 1996-97.</q>
+    </div>
+
+    <div class="step slide" data-x="-10000" data-y="0">
+        <q>Microsoft launched VBScript early 1996 (for Windows Scripting), bundling it with IE shortly. It also adopted JavaScript as JScript.</q>
+    </div>
+
+    <div class="step slide" data-x="-9000" data-y="0">
+        <q>
+            VBScript was considered an equal contender to Javascript around then, and gained a fair bit of traction as well. Partly owing to it's use for scripting Office apps. And also because VB was supposedly simpler. ASP used VBScript. But it ran only on IE (which didn't matter much owing to IE's major market share).
+        </q>
+    </div>
+
+    <div class="step slide" data-x="-8000" data-y="0">
+        <q>Then came Firefox (2002), making a serious dent in the browser market.</q>
+    </div>
+
+    <div class="step slide" data-x="-7000" data-y="0">
+        <q>JavaScript started off it's life backing simple tasks: UI transitions, automating simple calculations...</q>
+    </div>
+
+    <div class="step slide" data-x="-6000" data-y="0">
+        <q>...and toy scripts like this</q>
+        <cite>http://rainbow.arch.scriptmania.com/scripts/mouse_clock3.html</cite>
+        <style type="text/css">
+        <!--
+        /*Do not Alter these. Set for alignment*/
+        .css1{
+        position:absolute;top:0px;left:0px;
+        width:16px;height:16px;
+        font-family:Arial,sans-serif;
+        font-size:16px;
+        text-align:center;
+        font-weight:bold;
+        }
+        .css2{
+        position:absolute;top:0px;left:0px;
+        width:10px;height:10px;
+        font-family:Arial,sans-serif;
+        font-size:10px;
+        text-align:center;
+        }
+        //-->
+        </style>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Mouse Follow Clock 3 from Rainbow Arch -->
+<!-- This script and many more from : -->
+<!-- http://rainbow.arch.scriptmania.com -->
+
+<!-- Mouse Follow Clock 3 from http://rainbow.arch.scriptmania.com
+//Hide from older browsers 
+if (document.getElementById&&!document.layers){
+
+//Clock colours
+dCol='#00ff00';//date colour.
+fCol='#ffffff';//face colour.
+sCol='#ffffff';//seconds colour.
+mCol='#00ff00';//minutes colour.
+hCol='#00ff00';//hours colour.
+
+//Controls
+del=0.6;  //Follow mouse speed.
+ref=40;   //Run speed (timeout).
+
+//Alter nothing below! Alignments will be lost!
+var ieType=(typeof window.innerWidth != 'number');
+var docComp=(document.compatMode);
+var docMod=(docComp && docComp.indexOf("CSS") != -1);
+var ieRef=(ieType && docMod)
+?document.documentElement:document.body;
+theDays=new Array("SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY");
+theMonths=new Array("JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER");
+date=new Date();
+day=date.getDate();
+year=date.getYear();
+if (year < 2000) year=year+1900; 
+tmpdate=" "+theDays[date.getDay()]+" "+day+" "+theMonths[date.getMonth()]+" "+year;
+D=tmpdate.split("");
+N='3 4 5 6 7 8 9 10 11 12 1 2';
+N=N.split(" ");
+F=N.length;
+H='...';
+H=H.split("");
+M='....';
+M=M.split("");
+S='.....';
+S=S.split("");
+siz=40;
+eqf=360/F;
+eqd=360/D.length;
+han=siz/5.5;
+ofy=-7;
+ofx=-3;
+ofst=70;
+tmr=null;
+vis=true;
+mouseY=0;
+mouseX=0;
+dy=new Array();
+dx=new Array();
+zy=new Array();
+zx=new Array();
+tmps=new Array();
+tmpm=new Array(); 
+tmph=new Array();
+tmpf=new Array(); 
+tmpd=new Array();
+var sum=parseInt(D.length+F+H.length+M.length+S.length)+1;
+for (i=0; i < sum; i++){
+dy[i]=0;
+dx[i]=0;
+zy[i]=0;
+zx[i]=0;
+}
+
+algn=new Array();
+for (i=0; i < D.length; i++){
+algn[i]=(parseInt(D[i]) || D[i]==0)?10:9;
+document.write('<div id="_date'+i+'" class="css2" style="font-size:'+algn[i]+'px;color:'+dCol+'">'+D[i]+'<\/div>');
+tmpd[i]=document.getElementById("_date"+i).style;
+}
+for (i=0; i < F; i++){
+document.write('<div id="_face'+i+'" class="css2" style="color:'+fCol+'">'+N[i]+'<\/div>');
+tmpf[i]=document.getElementById("_face"+i).style; 
+}
+for (i=0; i < H.length; i++){
+document.write('<div id="_hours'+i+'" class="css1" style="color:'+hCol+'">'+H[i]+'<\/div>');
+tmph[i]=document.getElementById("_hours"+i).style;
+}
+for (i=0; i < M.length; i++){
+document.write('<div id="_minutes'+i+'" class="css1" style="color:'+mCol+'">'+M[i]+'<\/div>');
+tmpm[i]=document.getElementById("_minutes"+i).style; 
+}
+for (i=0; i < S.length; i++){
+document.write('<div id="_seconds'+i+'" class="css1" style="color:'+sCol+'">'+S[i]+'<\/div>');
+tmps[i]=document.getElementById("_seconds"+i).style;         
+}
+
+function onoff(){
+if (vis){ 
+ vis=false;
+ document.getElementById("control").value="Clock On";
+ }
+else{ 
+ vis=true;
+ document.getElementById("control").value="Clock Off";
+ Delay();
+ }
+kill();
+}
+
+function kill(){
+if (vis) 
+ document.onmousemove=mouse;
+else 
+ document.onmousemove=null;
+} 
+
+function mouse(e){
+var msy = (!ieType)?window.pageYOffset:0;
+if (!e) e = window.event;    
+ if (typeof e.pageY == 'number'){
+  mouseY = e.pageY + ofst - msy;
+  mouseX = e.pageX + ofst;
+ }
+ else{
+  mouseY = e.clientY + ofst - msy;
+  mouseX = e.clientX + ofst;
+ }
+if (!vis) kill();
+}
+document.onmousemove=mouse;
+
+function winDims(){
+winH=(ieType)?ieRef.clientHeight:window.innerHeight; 
+winW=(ieType)?ieRef.clientWidth:window.innerWidth;
+}
+winDims();
+window.onresize=new Function("winDims()");
+
+function ClockAndAssign(){
+time = new Date();
+secs = time.getSeconds();
+sec = Math.PI * (secs-15) / 30;
+mins = time.getMinutes();
+min = Math.PI * (mins-15) / 30;
+hrs = time.getHours();
+hr = Math.PI * (hrs-3) / 6 + Math.PI * parseInt(time.getMinutes()) / 360;
+
+for (i=0; i < S.length; i++){
+ tmps[i].top=dy[D.length+F+H.length+M.length+i]+ofy+(i*han)*Math.sin(sec)+scrollY+"px";
+ tmps[i].left=dx[D.length+F+H.length+M.length+i]+ofx+(i*han)*Math.cos(sec)+"px";
+ }
+for (i=0; i < M.length; i++){
+ tmpm[i].top=dy[D.length+F+H.length+i]+ofy+(i*han)*Math.sin(min)+scrollY+"px";
+ tmpm[i].left=dx[D.length+F+H.length+i]+ofx+(i*han)*Math.cos(min)+"px";
+ }
+for (i=0; i < H.length; i++){
+ tmph[i].top=dy[D.length+F+i]+ofy+(i*han)*Math.sin(hr)+scrollY+"px";
+ tmph[i].left=dx[D.length+F+i]+ofx+(i*han)*Math.cos(hr)+"px";
+ }
+for (i=0; i < F; i++){
+ tmpf[i].top=dy[D.length+i]+siz*Math.sin(i*eqf*Math.PI/180)+scrollY+"px";
+ tmpf[i].left=dx[D.length+i]+siz*Math.cos(i*eqf*Math.PI/180)+"px";
+ }
+for (i=0; i < D.length; i++){
+ tmpd[i].top=dy[i]+siz*1.5*Math.sin(-sec+i*eqd*Math.PI/180)+scrollY+"px";
+ tmpd[i].left=dx[i]+siz*1.5*Math.cos(-sec+i*eqd*Math.PI/180)+"px";
+ }
+if (!vis)clearTimeout(tmr);
+}
+
+buffW=(ieType)?80:90;
+function Delay(){
+scrollY=(ieType)?ieRef.scrollTop:window.pageYOffset;
+if (!vis){
+ dy[0]=-100;
+ dx[0]=-100;
+}
+else{
+ zy[0]=Math.round(dy[0]+=((mouseY)-dy[0])*del);
+ zx[0]=Math.round(dx[0]+=((mouseX)-dx[0])*del);
+}
+for (i=1; i < sum; i++){
+ if (!vis){
+  dy[i]=-100;
+  dx[i]=-100;
+ }
+ else{
+  zy[i]=Math.round(dy[i]+=(zy[i-1]-dy[i])*del);
+  zx[i]=Math.round(dx[i]+=(zx[i-1]-dx[i])*del);
+ }
+if (dy[i-1] >= winH-80) dy[i-1]=winH-80;
+if (dx[i-1] >= winW-buffW) dx[i-1]=winW-buffW;
+}
+
+tmr=setTimeout('Delay()',ref);
+ClockAndAssign();
+}
+window.onload=Delay;
+}
+//-->
+</script>
+    </div>
+
+    <div class="step slide" data-x="-5000" data-y="0">
+        <q>Legacy DOM - DOM Level 0: Access to Form, Link and Image elements</q>
+    </div>
+
+    <div class="step slide" data-x="-4000" data-y="0">
+        <q>W3C standardization. Intermediate DOM - DOM Level 1: DHTML. </q>
+    </div>
+
+    <div class="step slide" data-x="-3000" data-y="0">
+        <q>DOM Level 2: getElementById (2000)</q>
+    </div>
+
+    <div class="step slide" data-x="-2000" data-y="0">
+        <q>DOM Level 3: Current standard (2004)</q>
+    </div>
+
+    <div class="step" data-x="-1000" data-y="0" data-rotate="90" data-scale="4">
+        <center>Web 2.0 Era</center>
+    </div>
+
+    <div class="step slide" data-x="0" data-y="0">
+        <q>AJAX/XHR: XMLHttpRequest. RIA. GMail (DWR)</q>
+    </div>
+
+    <div class="step slide" data-x="1000" data-y="0">
+        <q>
+            if (window.XMLHttpRequest)
+{// IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+}
+else
+{// IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+        </q>
+    </div>
+
+    <div class="step slide" data-x="2000" data-y="0">
+        <q>
+            <ul>
+                <li>Increase in significance of JS</li>
+                <li>Incompatible implementations across browsers</li>
+                <li>Need for more structured JS</li>
+                <li>Clumsiness (for beginners) of JS OO</li>
+                <li>...</li>
+            </ul>
+            ...nudging birth of the initial JS frameworks.
+        </q>
+    </div>
+
+    <div class="step slide" data-x="3000" data-y="0">
+        <q>
+            <ul>
+                <li>[Feb 2005]  prototype.js - Ruby`esque (Bundled with Rails)</li>
+                <li>[Jun 2005]  Scriptaculous - Visual effects</li>
+                <li>[Aug 2005]  Dojo Toolkit</li>
+                <li>[Sep 2005]  YUI</li>
+                <li>[Dec 2007]  ExtJS</li>
+                <li>MooTools</li>
+            </ul>
+        </q>
+    </div>
+
+    <div class="step slide" data-x="4000" data-y="0">
+        <q>
+            [Aug 2006] jQuery
+            <ul>
+                <li>Plain Javascript (not trying to mimic Ruby, Python...)</li>
+                <li>Good wrapper over DOM API</li>
+                <li>CSS Selectors</li>
+            </ul>
+        </q>
+    </div>
+
+    <div class="step slide" data-x="5000" data-y="0">
+        <q>
+            JSON - 2001-02. Widespread adoption with the adoption of REST. Native support in browsers around 2009.
+        </q>
+    </div>
+
+    <div class="step slide" data-x="6000" data-y="0">
+        <q>
+            GWT
+            Comet (live HTTP connections) - Push notifications, Stock tickers
+        </q>
+    </div>
+
+    <!-- UI, Animation, Charting -->
+    <div class="step" data-x="7000" data-y="-4000" data-scale="4">
+        <center>UI, Animation and Charting</center>
+    </div>
+
+    <div class="step slide" data-x="8000" data-y="-4000">
+        <q> jQueryUI
+            Highcharts
+            Google Charts
+            SVG - Raphael.js</q>
+    </div>
+
+    <div class="step slide" data-x="9000" data-y="-4000">
+        <q>Dependent on Flash for truly interactive content. Until...</q>
+    </div>
+
+    <div class="step" data-x="10000" data-y="-4000" data-rotate="90">
+        <center>HTML5 and Canvas Era</center>
+    </div>
+
+    <div class="step slide" data-x="11000" data-y="-4000">
+        <q>Support for an open Canvas on which anything could be drawn - Nearly killed Flash (which incidentally used ActionScript, which is the same as JS - ECMAScript) all by itself</q>
+    </div>
+
+    <div class="step slide" data-x="12000" data-y="-4000">
+        <q>Mozilla editor based on canvas - Bespoke?</q>
+    </div>
+
+    <div class="step slide" data-x="13000" data-y="-4000">
+        <q>
+            d3.js
+            processing.js
+        </q>
+    </div>
+
+    <div class="step slide" data-x="14000" data-y="-4000">
+        <q>WebGL, HTML5 Audio and Video</q>
+    </div>
+
+    <div class="step slide" data-x="15000" data-y="-4000">
+        <q>final nails to the Flash coffin</q>
+    </div>
+
+    <div class="step slide" data-x="16000" data-y="-4000">
+        <q>Three.JS, Babylon.js, Unity3D (for scripting)</q>
+    </div>
+
+    <!-- JS Engine Race -->
+    <div class="step" data-x="7000" data-y="-3000" data-scale="4">
+        <center>JS Engine Race</center>
+    </div>
+
+    <div class="step slide" data-x="8000" data-y="-3000">
+        <q>
+            [Sep 2008] V8 - Google
+            Bundled with Google Chrome
+        </q>
+    </div>
+
+    <div class="step slide" data-x="9000" data-y="-3000">
+        <q>
+            Spidermonkey - Mozilla
+            Chakra - Microsoft
+        </q>
+    </div>
+
+    <div class="step slide" data-x="10000" data-y="-3000">
+        <q>asm.js</q>
+    </div>
+
+    <!-- MVC Frameworks -->
+    <div class="step" data-x="7000" data-y="-2000" data-scale="4">
+        <center>"MVC" Frameworks</center>
+    </div>
+
+    <div class="step slide" data-x="8000" data-y="-2000">
+        <q>What exactly is "MVC", and why should I care?</q>
+    </div>
+
+    <div class="step slide" data-x="9000" data-y="-2000">
+        <q>
+            Better JS
+            <ul>
+                <li>[May 2008] JavascriptMVC</li>
+                <li>[Jun 2010] SproutCore</li>
+                <li>[Jul 2010] KnockoutJS</li>
+                <li>[Oct 2010] BackboneJS</li>
+            </ul>
+        Goal: Mostly to manage the complexity of large JS codebases, caused by large, complex RIA.
+        </q>
+    </div>
+
+    <div class="step slide" data-x="10000" data-y="-2000">
+        <q>
+            Databinding magic, Declarative programming
+            <ul>
+                <li>AngularJS</li>
+                <li>EmberJS</li>
+                <li>ReactJS</li>
+            </ul>
+        </q>
+    </div>
+
+    <div class="step slide" data-x="11000" data-y="-2000">
+        <q>Polymer, Web Components</q>
+    </div>
+
+    <!-- Functional Programming -->
+    <div class="step" data-x="7000" data-y="-1000" data-scale="4">
+        <center>Functional Programming</center>
+    </div>
+
+    <div class="step slide" data-x="8000" data-y="-1000">
+        <q>underscore.js</q>
+    </div>
+
+    <div class="step slide" data-x="9000" data-y="-1000">
+        <q>lodash, Ramda, Bacon.js</q>
+    </div>
+
+    <!-- Modularization -->
+    <div class="step" data-x="7000" data-y="0" data-scale="4">
+        <center>Modularization</center>
+    </div>
+
+    <div class="step slide" data-x="8000" data-y="0">
+        <q>AMD (Asynchronous Module Definition), require.js</q>
+    </div>
+
+    <div class="step slide" data-x="9000" data-y="0">
+        <q>bower.js</q>
+    </div>
+
+    <!-- Advanced Features -->
+    <div class="step" data-x="7000" data-y="1000" data-scale="4">
+        <center>Advanced Features</center>
+    </div>
+
+    <div class="step slide" data-x="8000" data-y="1000">
+        <q>Websockets - Better than Comet (explain why)? Push notifications.</q>
+    </div>
+
+    <div class="step slide" data-x="9000" data-y="1000">
+        <q>Promises</q>
+    </div>
+
+    <div class="step slide" data-x="10000" data-y="1000">
+        <q>Local Storage</q>
+    </div>
+
+    <div class="step slide" data-x="11000" data-y="1000">
+        <q>Local File Access (FileUpload)</q>
+    </div>
+
+    <div class="step slide" data-x="12000" data-y="1000">
+        <q>Web Workers</q>
+    </div>
+
+    <div class="step slide" data-x="13000" data-y="1000">
+        <q>Web Audio API</q>
+    </div>
+
+    <!-- Testing -->
+    <div class="step" data-x="7000" data-y="2000" data-scale="4">
+        <center>Testing</center>
+    </div>
+
+    <div class="step slide" data-x="8000" data-y="2000">
+        <q>JSUnit</q>
+    </div>
+
+    <div class="step slide" data-x="9000" data-y="2000">
+        <q>Fitnesse?, Selenium, WebDriver</q>
+    </div>
+
+    <div class="step slide" data-x="10000" data-y="2000">
+        <q>Mocha, Jasmine, Karma, PhantomJS</q>
+    </div>
+
+    <!-- Languages that compile to Javascript -->
+    <div class="step" data-x="7000" data-y="3000" data-scale="4">
+        <center>Languages that compile to Javascript</center>
+    </div>
+
+    <div class="step slide" data-x="8000" data-y="3000">
+        <q>Coffeescript: Cleaner, easier to read (?) syntax. Less code (mostly). Does not save you from understanding JavaScript though.</q>
+    </div>
+
+    <div class="step slide" data-x="9000" data-y="3000">
+        <q>Dart - Google</q>
+    </div>
+
+    <div class="step slide" data-x="10000" data-y="3000">
+        <q>TypeScript - Microsoft - Angular 2 will be written in this</q>
+    </div>
+
+    <div class="step slide" data-x="11000" data-y="3000">
+        <q>GWT (dead), Elm</q>
+    </div>
+
+    <div class="step slide" data-x="12000" data-y="3000">
+        <q>... and a lot of others, but without significant traction at the moment - Scala.js, ClojureScript, AmberJS, Haxe</q>
+    </div>
+
+    <!-- Server Side Javascript -->
+    <div class="step" data-x="7000" data-y="4000" data-scale="4">
+        <center>Server Side Javascript</center>
+    </div>
+
+    <div class="step slide" data-x="8000" data-y="4000">
+        <q>Isometric Architecture</q>
+    </div>
+
+    <div class="step slide" data-x="9000" data-y="4000">
+        <q>Netscape's apparently planned to have server side scripting (with JS) attempt in Dec 1994.</q>
+    </div>
+
+    <div class="step slide" data-x="10000" data-y="4000">
+        <q>Mozilla's attempt - Rhino (JS on JVM)
+            Originally started by Netscape in 1997. Over to Mozilla foundation in 1998.
+            (but seriously, who would use JS for server side programming?)</q>
+    </div>
+
+    <div class="step slide" data-x="11000" data-y="4000">
+        <q>NodeJS - built using V8. For the first time, the idea of server side JS code did not sound ridiculous. And it performed (for a certain definition of performance)</q>
+    </div>
+
+    <div class="step slide" data-x="12000" data-y="4000">
+        <q>npm</q>
+    </div>
+
+    <div class="step slide" data-x="13000" data-y="4000">
+        <q>async.js</q>
+    </div>
+
+    <!-- Future -->
+    <div class="step" data-x="7000" data-y="5000" data-scale="4">
+        <center>Future</center>
+    </div>
+
+    <div class="step slide" data-x="8000" data-y="5000">
+        <q>Web Components (started out as Polymer)</q>
+    </div>
+
+    <div class="step slide" data-x="9000" data-y="5000">
+        <q>Replacement by Dart, Typescript - unlikely?</q>
+    </div>
+
+    <div class="step slide" data-x="10000" data-y="5000">
+        <q>Faster, compiled JS - asm.js</q>
+    </div>
+
+    <div class="step slide" data-x="11000" data-y="5000">
+        <q>Strict, typesafe JS</q>
+    </div>
+
+    <div class="step slide" data-x="12000" data-y="5000">
+        <q>Thank you. And, did you notice that this presentation itself is built using JS?
+            We used impress.js. Kudos to @bartaz for creating impress.js :)</q>
+    </div>
+
+    <div id="overview" class="step" data-x="-2000" data-y="0" data-scale="22">
+    </div>
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script>
+var presentation = impress();
+presentation.init();
+
+window.addEventListener("keypress", function(keyEvent) {
+    if(keyEvent.keyCode == "79" /* O */) {
+        presentation.goto("overview");
+    }
+});
+
+</script>
+
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>
