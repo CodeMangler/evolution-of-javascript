@@ -12,11 +12,10 @@
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
-    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href="css/slides.css" rel="stylesheet" />
     
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <script src="js/ace/ace.js"></script>
 </head>
 
 <body class="impress-not-supported">
@@ -345,22 +344,16 @@ window.onload=Delay;
     </div>
 
     <div class="step slide" data-x="1000" data-y="0">
-        <q>
-            <pre id="xhrSnippet">if (window.XMLHttpRequest)
+<pre id="xhrSnippet">
+if (window.XMLHttpRequest)
 {// IE7+, Firefox, Chrome, Opera, Safari
     xmlhttp=new XMLHttpRequest();
 }
 else
 {// IE6, IE5
     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-}</pre>
-<script>
-    var editor = ace.edit("xhrSnippet");
-    editor.setTheme("js/ace/theme/twilight");
-    editor.getSession().setMode("js/ace/mode/javascript");
-</script>
-
-        </q>
+}
+</pre>
     </div>
 
     <div class="step slide" data-x="2000" data-y="0">
@@ -436,7 +429,7 @@ else
     </div>
 
     <div class="step slide" data-x="12000" data-y="-4000">
-        <q>Mozilla editor based on canvas - Bespoke?</q>
+        <q>Mozilla editor based on canvas - Bespin</q>
     </div>
 
     <div class="step slide" data-x="13000" data-y="-4000">
@@ -686,6 +679,8 @@ if ("ontouchstart" in document.documentElement) {
 </script>
 
 <script src="js/impress.js"></script>
+<script src="js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+
 <script>
 var presentation = impress();
 presentation.init();
@@ -695,6 +690,15 @@ window.addEventListener("keypress", function(keyEvent) {
         presentation.goto("overview");
     }
 });
+</script>
+
+<script>
+window.onload = function(){
+    var editor = ace.edit("xhrSnippet");
+    editor.setTheme("ace/theme/twilight");
+    editor.getSession().setMode("ace/mode/javascript");
+    editor.setFontSize(28);
+};
 </script>
 
 <!--
