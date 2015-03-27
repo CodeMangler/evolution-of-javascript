@@ -16,6 +16,7 @@
     
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script src="js/ace/ace.js"></script>
 </head>
 
 <body class="impress-not-supported">
@@ -34,7 +35,7 @@
         </center>
     </div>
 
-    <div class="step slide" data-x="-18000" data-y="0">
+    <div class="step slide" data-x="-17000" data-y="0">
         <q>You can't know where you are going until you know where you have been</q>
         <q>Those who do not know history are doomed to repeat it</q>
     </div>
@@ -330,7 +331,7 @@ window.onload=Delay;
     </div>
 
     <div class="step" data-x="-1000" data-y="0" data-rotate="90" data-scale="4">
-        <center>Web 2.0 Era</center>
+        <center>Web 2.0</center>
     </div>
 
     <div class="step slide" data-x="0" data-y="0">
@@ -345,14 +346,20 @@ window.onload=Delay;
 
     <div class="step slide" data-x="1000" data-y="0">
         <q>
-            if (window.XMLHttpRequest)
+            <pre id="xhrSnippet">if (window.XMLHttpRequest)
 {// IE7+, Firefox, Chrome, Opera, Safari
     xmlhttp=new XMLHttpRequest();
 }
 else
 {// IE6, IE5
     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-}
+}</pre>
+<script>
+    var editor = ace.edit("xhrSnippet");
+    editor.setTheme("js/ace/theme/twilight");
+    editor.getSession().setMode("js/ace/mode/javascript");
+</script>
+
         </q>
     </div>
 
@@ -403,10 +410,17 @@ else
     </div>
 
     <div class="step slide" data-x="8000" data-y="-4000">
-        <q> jQueryUI
-            Highcharts
-            Google Charts
-            SVG - Raphael.js</q>
+        <q> <ul>
+            <li>jQueryUI</li>
+            <li>Highcharts</li>
+            <li>Google Charts</li>
+            <li>...</li>
+        </ul>
+        SVG
+        <ul>
+            <li>Protovis</li>
+            <li>Raphael.js</li>
+        </ul></q>
     </div>
 
     <div class="step slide" data-x="9000" data-y="-4000">
@@ -414,7 +428,7 @@ else
     </div>
 
     <div class="step" data-x="10000" data-y="-4000" data-rotate="90">
-        <center>HTML5 and Canvas Era</center>
+        <center>HTML5 and Canvas</center>
     </div>
 
     <div class="step slide" data-x="11000" data-y="-4000">
@@ -681,7 +695,6 @@ window.addEventListener("keypress", function(keyEvent) {
         presentation.goto("overview");
     }
 });
-
 </script>
 
 <!--
