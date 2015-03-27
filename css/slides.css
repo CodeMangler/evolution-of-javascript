@@ -42,10 +42,6 @@ body {
     line-height: 1;
 }
 
-ol, ul {
-    list-style: none;
-}
-
 blockquote, q {
     quotes: none;
 }
@@ -328,4 +324,14 @@ blockquote p {
 .slide.dark {
     background-color: black;
     color: white;
+}
+
+.slide h1 {
+    font-size: 50px;
+    line-height: 72px;
+}
+
+.slide li {
+    font-size: 30px;
+    line-height: 72px;
 }
