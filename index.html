@@ -307,7 +307,7 @@ else
             <ul>
                 <li>[2009] AngularJS</li>
                 <li>[2011] EmberJS</li>
-                <li>[2013] ReactJS</li>
+                <li>[2013] ReactJS, Flux</li>
             </ul>
         </q>
     </div>
@@ -325,11 +325,16 @@ else
     </div>
 
     <div class="step slide" data-x="6000" data-y="-1000">
-        <q>underscore.js</q>
+        <q><center>underscore.js</center></q>
+        <span class="juncture">October 2009</span>
     </div>
 
     <div class="step slide" data-x="7000" data-y="-1000">
-        <q>lodash, Ramda, Bacon.js</q>
+        <ul>
+            <li>lodash</li>
+            <li>Ramda</li>
+            <li>Bacon.js</li>
+        </ul>
     </div>
 
     <!-- Modularization -->
@@ -338,11 +343,15 @@ else
     </div>
 
     <div class="step slide" data-x="6000" data-y="0">
-        <q>AMD (Asynchronous Module Definition), require.js</q>
+        <center>
+            <h1>AMD</h1>
+            <span class="subtext">(Asynchronous Module Definition)</span>
+            <h1>require.js</h1>
+        </center>
     </div>
 
     <div class="step slide" data-x="7000" data-y="0">
-        <q>bower.js</q>
+        <q><center>bower.js</center></q>
     </div>
 
     <!-- Advanced Features -->
@@ -351,27 +360,31 @@ else
     </div>
 
     <div class="step slide" data-x="6000" data-y="1000">
-        <q>Websockets - Better than Comet (explain why)? Push notifications.</q>
+        <center>
+            <q>Websockets</q>
+            <span class="subtext">(Comet)</span><br/>
+            <span class="subtext">socket.io</span>
+        </center>
     </div>
 
     <div class="step slide" data-x="7000" data-y="1000">
-        <q>Promises</q>
+        <q><center>Promises</center></q>
     </div>
 
     <div class="step slide" data-x="8000" data-y="1000">
-        <q>Local Storage</q>
+        <q><center>Local Storage</center></q>
     </div>
 
     <div class="step slide" data-x="9000" data-y="1000">
-        <q>Local File Access (FileUpload)</q>
+        <q><center>Local File Access<br/><span class="subtext">(FileUpload/File API)</span></center></q>
     </div>
 
     <div class="step slide" data-x="10000" data-y="1000">
-        <q>Web Workers</q>
+        <q><center>Web Workers</center></q>
     </div>
 
     <div class="step slide" data-x="11000" data-y="1000">
-        <q>Web Audio API</q>
+        <q><center>Web Audio API</center></q>
     </div>
 
     <!-- Testing -->
@@ -380,42 +393,73 @@ else
     </div>
 
     <div class="step slide" data-x="6000" data-y="2000">
-        <q>JSUnit</q>
+        <center>
+            <h1>[2004] Selenium</h1>
+            <h1>[2012] WebDriver</h1>
+        </center>
+        <span class="juncture">2004, 2012</span>
     </div>
 
     <div class="step slide" data-x="7000" data-y="2000">
-        <q>Fitnesse?, Selenium, WebDriver</q>
+        <q><center>JSUnit</center></q>
+        <span class="juncture">January 2001</span>
     </div>
 
     <div class="step slide" data-x="8000" data-y="2000">
-        <q>Mocha, Jasmine, Karma, PhantomJS</q>
+        <ul>
+            <li>Mocha</li>
+            <li>Jasmine</li>
+            <li>Karma</li>
+        </ul>
+        <center><span class="subtext">(PhantomJS)</span></center>
     </div>
 
     <!-- Languages that compile to JavaScript -->
     <div class="step" data-x="4000" data-y="3000" data-scale="4">
-        <center>Languages that compile to JavaScript</center>
+        <center>Transcompilers</center>
     </div>
 
     <div class="step slide" data-x="6000" data-y="3000">
-        <q>Coffeescript: Cleaner, easier to read (?) syntax. Less code (mostly). Does not save you from understanding
-            JavaScript though.</q>
+        <h1><center>Coffeescript</center></h1>
+        <ul>
+            <li>Cleaner</li>
+            <li>Easier to read and understand</li>
+            <li>Usually less code (than JS)</li>
+            <li>Does not save you from understanding JS</li>
+        </ul>
+        <span class="juncture">December 2009</span>
     </div>
 
     <div class="step slide" data-x="7000" data-y="3000">
-        <q>Dart - Google</q>
+        <center>
+            <q>TypeScript</q>
+            <span class="subtext">(Angular 2)</span>
+        </center>
+        <span class="juncture">October 2012</span>
     </div>
 
     <div class="step slide" data-x="8000" data-y="3000">
-        <q>TypeScript - Microsoft - Angular 2 will be written in this</q>
+        <q><center>Dart</center></q>
+        <span class="juncture">November 2013</span>
     </div>
 
     <div class="step slide" data-x="9000" data-y="3000">
-        <q>GWT (dead), DWR, Elm</q>
+        <ul>
+            <li>GWT [dead]</li>
+            <li>DWR [dead]</li>
+            <li>Elm</li>
+        </ul>
     </div>
 
     <div class="step slide" data-x="10000" data-y="3000">
-        <q>... and a lot of others, but without significant traction at the moment - Scala.js, ClojureScript, AmberJS,
-            Haxe</q>
+        <h1><center>...and a LOT more, but not much traction</center></h1>
+        <ul>
+            <li>ClojureScript</li>
+            <li>Scala.js</li>
+            <li>AmberJS</li>
+            <li>Haxe</li>
+            <li>...</li>
+        </ul>
     </div>
 
     <!-- Server Side JavaScript -->
@@ -424,30 +468,38 @@ else
     </div>
 
     <div class="step slide" data-x="6000" data-y="4000">
-        <q>Isomorphic Architecture</q>
+        <q><center>Isomorphic Architecture</center></q>
     </div>
 
     <div class="step slide" data-x="7000" data-y="4000">
-        <q>Netscape's apparently planned to have server side scripting (with JS) attempt in Dec 1994.</q>
+        <h1><center>Netscape/Mozilla</center></h1>
+        <ul>
+            <li>[December 1994] Netscape planned for a server-side script</li>
+            <li>[1997] Netscape started Rhino</li>
+            <li>[1998] Rhino handed over to Mozilla foundation</li>
+        </ul>
     </div>
 
     <div class="step slide" data-x="8000" data-y="4000">
-        <q>Mozilla's attempt - Rhino (JS on JVM)
-            Originally started by Netscape in 1997. Over to Mozilla foundation in 1998.
-            (but seriously, who would use JS for server side programming?)</q>
+        <q><center><span class="subtext">(but seriously, who would use JS for server side programming?)</span></center></q>
     </div>
 
     <div class="step slide" data-x="9000" data-y="4000">
-        <q>NodeJS - built using V8. For the first time, the idea of server side JS code did not sound ridiculous. And it
-            performed (for a certain definition of performance)</q>
+        <h1><center>NodeJS</center></h1>
+        <ul>
+            <li>Built using V8 [Sep 2008]</li>
+            <li>For the first time, server side JS did not sound ridiculous</li>
+            <li>Performed well (for a certain class of problems)</li>
+        </ul>
+        <span class="juncture">May 2009</span>
     </div>
 
     <div class="step slide" data-x="10000" data-y="4000">
-        <q>npm</q>
+        <q><center>npm</center></q>
     </div>
 
     <div class="step slide" data-x="11000" data-y="4000">
-        <q>async.js</q>
+        <q><center>async.js</center></q>
     </div>
 
     <!-- Future -->
@@ -456,24 +508,31 @@ else
     </div>
 
     <div class="step slide" data-x="6000" data-y="5000">
-        <q>Web Components (started out as Polymer)</q>
+        <q><center>Web Components</center></q>
     </div>
 
     <div class="step slide" data-x="7000" data-y="5000">
-        <q>Replacement by Dart, Typescript - unlikely?</q>
+        <h1><center>Languages transpiling to JS</center></h1>
+        <ul>
+            <li>TypeScript</li>
+            <li>Dart - Beats JS performance on V8</li>
+        </ul>
     </div>
 
     <div class="step slide" data-x="8000" data-y="5000">
-        <q>Faster, compiled JS - asm.js</q>
+        <center>
+            <q>Faster, compiled JS</q>
+            <span class="subtext">(asm.js)</span><br/>
+            <span class="subtext">(Google Chrome Native Client)</span>
+        </center>
     </div>
 
     <div class="step slide" data-x="9000" data-y="5000">
-        <q>Strict, typesafe JS</q>
-    </div>
-
-    <div class="step slide" data-x="10000" data-y="5000">
-        <q>Thank you. And, did you notice that this presentation itself is built using JS?
-            We used impress.js. Kudos to @bartaz for creating impress.js :)</q>
+        <center>
+            <q>Thank you!</q>
+            <span class="subtext">In case you haven't noticed, this presentation is built using JS :)</span><br/>
+            <span class="subtext">Kudos to @bartaz for creating impress.js</span><br/>
+        </center>
     </div>
 
     <div id="overview" class="step" data-x="-2000" data-y="0" data-scale="22">
