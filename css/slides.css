@@ -288,16 +288,9 @@ body {
     font-size: 24px;
     text-align: center;
     display: block;
-    position: relative;
-    top: 400px;
-}
-
-#xhrSnippet {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    bottom: 0px;
+    width: 90%;
 }
 
 blockquote {
@@ -334,4 +327,21 @@ blockquote p {
 .slide li {
     font-size: 30px;
     line-height: 72px;
+}
+
+.subtext {
+    font-size: 20px;
+}
+
+#xhrSnippet {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#threeJSDemo {
+    width: 100%;
+    height: 100%;    
 }
