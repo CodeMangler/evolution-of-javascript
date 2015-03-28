@@ -32,78 +32,78 @@
 
 <div id="impress">
 
-    <div class="step slide" data-x="-18000" data-y="0">
+    <div class="step slide" data-x="-19000" data-y="0">
         <center>
             <q>Evolution of JavaScript</q> <br/>
             <img src="images/javascript.png"/>
         </center>
     </div>
 
-    <div class="step slide" data-x="-17000" data-y="0">
+    <div class="step slide" data-x="-18000" data-y="0">
         <blockquote><p>You can't know where you are going until you know where you have been</p></blockquote>
         <p></p>
         <blockquote><p>Those who don't know history are doomed to repeat it</blockquote>
     </div>
 
-    <div class="step" data-x="-16000" data-y="0" data-rotate="90" data-scale="4">
+    <div class="step" data-x="-17000" data-y="0" data-rotate="90" data-scale="4">
         <center>Browser Wars</center>
     </div>
 
-    <div class="step slide" data-x="-15000" data-y="0">
+    <div class="step slide" data-x="-16000" data-y="0">
         <q>
             <center>Once upon a time...</center>
             <span class="juncture">(~1995-2001)</span>
         </q>
     </div>
 
-    <div class="step slide" data-x="-14000" data-y="0">
+    <div class="step slide" data-x="-15000" data-y="0">
         <q><center>Microsoft and Netscape fought over the Browser Market Share</center></q>
     </div>
 
-    <div class="step slide" data-x="-13000" data-y="0">
+    <div class="step slide" data-x="-14000" data-y="0">
         <q>
             <center>Mocha</center>
             <span class="juncture">March/April 1995</span>
         </q>
     </div>
 
-    <div class="step slide" data-x="-12000" data-y="0">
+    <div class="step slide" data-x="-13000" data-y="0">
         <q>
             <center>LiveScript</center>
             <span class="juncture">September 1995</span>
         </q>
     </div>
 
-    <div class="step slide" data-x="-11000" data-y="0">
+    <div class="step slide" data-x="-12000" data-y="0">
         <q>
             <center>JavaScript</center>
             <span class="juncture">December 1995</span>
         </q>
     </div>
 
-    <div class="step slide" data-x="-10000" data-y="0">
+    <div class="step slide" data-x="-11000" data-y="0">
         <q>
             <center>VBScript, JScript</center>
             <span class="juncture">Early 1996; IE - August 1996</span>
         </q>
     </div>
 
-    <div class="step slide" data-x="-9000" data-y="0">
+    <div class="step slide" data-x="-10000" data-y="0">
         <q>
             <center>Firefox</center>
             <span class="juncture">September 2002</span>
         </q>
     </div>
 
-    <div class="step" data-x="-8000" data-y="0" data-rotate="90" data-scale="4">
+    <div class="step" data-x="-9000" data-y="0" data-rotate="90" data-scale="4">
         <center>Early Days</center>
     </div>
 
-    <div class="step slide" data-x="-7000" data-y="0">
+    <div class="step slide" data-x="-8000" data-y="0">
         <q>Simple tasks: UI transitions, automating simple calculations...</q>
     </div>
 
-    <div class="step slide dark" data-x="-6000" data-y="0">
+    <div class="step slide dark" data-x="-7000" data-y="0">
         <q>...and toy scripts like this</q>
         <span class="subtext"><cite>(http://rainbow.arch.scriptmania.com/scripts/mouse_clock3.html)</cite></span>
         
@@ -114,7 +114,7 @@
         </script>
     </div>
 
-    <div class="step slide" data-x="-5000" data-y="0">
+    <div class="step slide" data-x="-6000" data-y="0">
         <h1><center>DOM</center></h1>
         <ul>
             <li>Legacy DOM - DOM Level 0</li>
@@ -124,11 +124,11 @@
         </ul>
     </div>
 
-    <div class="step" data-x="-4000" data-y="0" data-rotate="90" data-scale="4">
+    <div class="step" data-x="-5000" data-y="0" data-rotate="90" data-scale="4">
         <center>Web 2.0</center>
     </div>
 
-    <div class="step slide" data-x="-3000" data-y="0">
+    <div class="step slide" data-x="-4000" data-y="0">
         <q>
             <ul>
                 <li>XHR (XMLHttpRequest)</li>
@@ -139,7 +139,7 @@
         </q>
     </div>
 
-    <div class="step slide" data-x="-2000" data-y="0">
+    <div class="step slide" data-x="-3000" data-y="0">
 <pre id="xhrSnippet">
 if (window.XMLHttpRequest)
 {// IE7+, Firefox, Chrome, Opera, Safari
@@ -149,6 +149,20 @@ else
 {// IE6, IE5
     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 }
+</pre>
+    </div>
+
+    <div class="step slide" data-x="-2000" data-y="0">
+<pre id="xhrReadyStateSnippet">
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","ajax_info.txt",true);
+xmlhttp.send();
 </pre>
     </div>
 
@@ -584,10 +598,13 @@ else
 
 <script>
     window.onload = function () {
-        var editor = ace.edit("xhrSnippet");
-        editor.setTheme("ace/theme/twilight");
-        editor.getSession().setMode("ace/mode/javascript");
-        editor.setFontSize(28);
+        var editors = ["xhrSnippet", "xhrReadyStateSnippet"];
+        editors.forEach(function(editorID){
+            var editor = ace.edit(editorID);
+            editor.setTheme("ace/theme/twilight");
+            editor.getSession().setMode("ace/mode/javascript");
+            editor.setFontSize(28);
+        });
     };
 </script>
 
